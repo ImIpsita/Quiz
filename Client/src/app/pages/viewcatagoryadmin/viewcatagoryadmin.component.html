@@ -1,0 +1,18 @@
+<mat-card class="mt10" *ngFor="let c of categories">
+    <!--{{c | json}}-->
+    <mat-card-header>
+      <div mat-card-avatar class="header-image"></div>
+        <mat-card-title>{{c.title}}</mat-card-title>
+        <mat-card-subtitle><p>{{c.description}}</p></mat-card-subtitle>
+    </mat-card-header>
+   
+
+      <mat-card-actions>
+          <button mat-raised-button color="accent" class="ml20" [routerLink]="'/admin/viewcatagory/' + c.catId">Update</button>
+          <button mat-raised-button color="accent" class="ml20" (click)="deleteCatagoty(c.catId)" >Delete</button>
+      </mat-card-actions>
+</mat-card>
+
+ <div class="text-center mt20">
+  <button mat-raised-button color="accent" routerLink="/admin/addcatagory">Add Catagory</button>
+ </div>

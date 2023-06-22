@@ -1,0 +1,75 @@
+
+<mat-card>
+    <h1 class=" text-center ml20">Update Question</h1>
+  <!--{{question | json}}-->
+      <mat-card-content>
+            <div class="bootStrap-wrapper">
+               <div class="row text-center">
+                 <div class="col-md-6 offset-md-3">
+                  <form *ngIf="updateQstn" (ngSubmit)="updateQstnItem()" >
+                      <mat-form-field  appearance="outline" class="updateqstn mr20 mr10">
+                          <mat-label>Write Question Content</mat-label>
+                          <textarea matInput placeholder="Enter your question" type="text"  name="description"
+                          [(ngModel)]="updateQstn.content" name="content" rows="4" required></textarea>
+                        </mat-form-field><br>
+                                 <!--Options added-->
+                               <div class="row text_center ml10">
+                                  <div class="col-md-6">
+                                    <mat-form-field>
+                                        <mat-label>Option 1</mat-label>
+                                        <input matInput placeholder="Enter your 1st option" type="text"  name="option1"
+                                        [(ngModel)]="updateQstn.option1" required=""/>
+                                      </mat-form-field><br>
+                                     </div>
+
+                                  <div class="col-md-6">
+                                    <mat-form-field>
+                                        <mat-label>Option 2</mat-label>
+                                        <input matInput placeholder="Enter your 2nd option" type="text"  name="option2"
+                                        [(ngModel)]="updateQstn.option2" required=""/>
+                                      </mat-form-field><br>
+                                    </div>
+
+                                 <div class="col-md-6">
+                                     <mat-form-field>
+                                        <mat-label>Option 3</mat-label>
+                                        <input matInput placeholder="Enter your 3rd option" type="text"  name="option3"
+                                        [(ngModel)]="updateQstn.option3" required=""/>
+                                      </mat-form-field><br>
+                                    </div>
+
+                                   <div class="col-md-6">
+                                 <mat-form-field>
+                                        <mat-label>Option 4</mat-label>
+                                        <input matInput placeholder="Enter your 4th option" type="text"  name="option4"
+                                        [(ngModel)]="updateQstn.option4" required=""/>
+                                      </mat-form-field><br>
+                                    </div>
+                               </div>
+                       <!--answer select-->
+                        <div class="row">
+                       <mat-form-field  appearance="outline" class="updateqstn">
+                     <mat-label>Correct Answer</mat-label>
+                        <mat-select [(ngModel)]="updateQstn.answer" name="answer">
+                        <mat-option *ngIf="updateQstn.option1" [value]="updateQstn.option1">{{updateQstn.option1}}</mat-option>
+                        <mat-option *ngIf="updateQstn.option2" [value]="updateQstn.option2">{{updateQstn.option2}}</mat-option>
+                       <mat-option *ngIf="updateQstn.option3" [value]="updateQstn.option3">{{updateQstn.option3}}</mat-option>
+                       <mat-option *ngIf="updateQstn.option4" [value]="updateQstn.option4">{{updateQstn.option4}}</mat-option>
+                   </mat-select>
+                </mat-form-field>
+             </div>
+
+
+            </form>
+                </div>
+                  </div>
+                    </div>
+      </mat-card-content>
+  </mat-card>
+
+   <!--button added-->
+   <div class=" text-center mt20">
+    <button mat-raised-button color="accent" class="button-container">Update</button>
+      </div>
+   
+  

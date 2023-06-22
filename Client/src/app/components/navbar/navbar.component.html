@@ -1,0 +1,45 @@
+<mat-toolbar color="primary">
+    <a href="" mat-icon-button class="material-icons"
+        aria-label="Example icon-button with home icon">
+     <mat-icon>home_filled </mat-icon>
+</a>
+   <span>My App</span>
+   <span class="example-spacer"></span>
+
+   
+   <a 
+   *ngIf="!isLoggedIn"
+   [routerLink]="'/login'"
+   mat-icon-button class="material-icons" aria-label="Example icon-button with share icon">
+    <mat-icon>app_registration</mat-icon>
+</a>
+
+
+<!--<button
+   *ngIf="isLoggedIn && userdetails"
+   
+  class="material-icons" aria-label="Example icon-button with share icon"> 
+  console.log(userdetails);
+  
+    
+</button>-->
+
+
+<a 
+    (click) = "logout()"
+   *ngIf="isLoggedIn"
+   mat-icon-button class="material-icons" aria-label="Example icon-button with share icon">
+    <mat-icon>logout</mat-icon>
+   
+    
+</a>
+
+<!-- does not load the page -->
+   <a  
+   *ngIf="!isLoggedIn"
+   [routerLink]="'/signup'"  
+    mat-icon-button class="material-icons" aria-label="Example icon-button with reg icon">
+     <mat-icon>how_to_reg</mat-icon>
+</a>
+   
+ </mat-toolbar>

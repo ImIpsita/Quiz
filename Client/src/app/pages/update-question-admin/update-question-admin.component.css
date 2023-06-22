@@ -1,0 +1,16 @@
+.updateqstn{
+    width: 100%
+}
+.buttonuu-container{
+    width: 5px;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+
+    
+}

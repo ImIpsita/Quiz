@@ -1,0 +1,30 @@
+<mat-card>
+    <h1 class="ml20">Update Catagory</h1>
+    <!--{{updatecatagories | json}}-->
+      <mat-card-content>
+            <div class="bootStrap-wrapper">
+               <div class="row">
+                 <div class="col-md-6 offset-md-3">
+                  <form *ngIf="updatecatagories" (ngSubmit)="updateCatagory()">
+                      <mat-form-field appearance="outline" class="updatecatagory">
+                          <mat-label>Fill title field</mat-label>
+                          <input matInput placeholder="Enter title here" type="text" 
+                          [(ngModel)]="updatecatagories.title" name="title" required />
+                        </mat-form-field><br>
+          
+                        <mat-form-field appearance="outline" class="updatecatagory">
+                          <mat-label>Fill description field</mat-label>
+                          <textarea matInput placeholder="Enter title here" type="text" [(ngModel)]="updatecatagories.description" name="description"></textarea>
+                        </mat-form-field>
+  
+                        <div>
+                          <button mat-raised-button color="accent" class="button-container">update</button>
+                       </div>
+                       </form>
+                  </div>
+                </div>
+               </div>
+</mat-card-content>
+  
+  </mat-card>
+  

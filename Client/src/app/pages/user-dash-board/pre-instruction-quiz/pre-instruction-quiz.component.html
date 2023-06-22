@@ -1,0 +1,47 @@
+
+<!-- {{quizz | json}} -->
+<div class="bootstrap-wrapper">
+    <div class="container-fluid mt10" >
+        <h1 style="color:blue" class="text-center"><b><u>PreInstruction Before Start Quiz</u></b></h1>
+        <div class="row">
+            
+            <mat-card  class="mt10 mr10 ml10" style="width:100%">
+               <mat-card-header>
+                <mat-card-title>Read the instruction of this page carefully !!</mat-card-title>
+                <mat-card-subtitle>one step more to go</mat-card-subtitle>
+
+                <mat-card-title>{{quizz?.title}}</mat-card-title>
+                
+               </mat-card-header>
+
+               <mat-card-content>
+                <h5>This quiz contains question releated to {{quizz?.description}}.This is only for testing purpose</h5>
+                <mat-divider></mat-divider>
+
+                <h1 class="mr10">Important Instruction</h1>
+                <ul>
+                     <li>This quiz is only for practice purpose.</li>
+                     <!-- <li>You have to submmit quiz with in <b>20 Minutes.</b></li> -->
+                     <li>There are <b>{{quizz?.numberofQuestion}} questions.</b>  in this quiz</li>
+                     <li>Each questions contains <b>{{quizz?.numberofQuestion/quizz?.maxMarks}}</b> marks.</li>
+                     <li>All Questions is of MCQ type</li>
+                </ul>
+
+                <mat-divider></mat-divider>
+
+                <h1 class="mr10">Attempting Quiz</h1>
+                <ul>
+                <li> Click <b>Start Quiz</b> button to start the quiz</li>
+                <li>The Time will start when you click on Start Test Button</li>
+                <li>Scroll down to move next question</li>
+                <li>Click on <b>Submit Quiz button</b> on completion of your quiz</li>
+                </ul>
+               </mat-card-content>
+           </mat-card>
+         </div>
+
+        <div class="text-center mt20">
+            <button mat-raised-button color="primary" (click)="startQuiz()">Start Quiz</button>
+         </div>
+     </div>
+</div>

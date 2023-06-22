@@ -1,0 +1,54 @@
+<mat-card>
+    <h1 class="ml10">Admin Profile Details</h1>
+    <!--{{userDetails | json}}--> 
+    <mat-card-content>
+        <div class="bootStrap-wrapper">
+            <div class="container-fluid  text-center">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsD6sCANKJDW6Rn7SCjfe8_p_8z3Z7qNLY1h1nRUaWUQ&usqp=CAU&ec=48665698"
+              class="adminprofileimg"
+              />
+                 <h1>{{userDetails?.firstName}} {{userDetails?.lastName}}</h1>
+            </div>
+
+            <div class="row">
+                <div class="col-mod-10 offset-md-3">
+                  <table class="table text-center">
+                      <tr>
+                          <td>UserName</td>
+                          <td>{{userDetails?.username}}</td>
+
+                      </tr>
+
+                      <tr>
+                        <td>UserId</td>
+                        <td>{{userDetails?.userId}}</td>
+
+                    </tr>
+
+
+                    <tr>
+                        <td>mobileNo</td>
+                        <td>{{userDetails?.mobileNo}}</td>
+
+                    </tr>
+
+                    <tr>
+                        <td>Role</td>
+                        <td>{{userDetails?.authorities[0].authority}}</td>
+
+                    </tr>
+
+                  </table>
+
+
+                </div>
+            </div>
+
+        </div>
+        <mat-card-actions class="button-container ml20">
+           <button mat-button  mat-raised-button color="primary" >Update</button>
+           <button mat-button  mat-raised-button color="accent"  >Share</button>
+        </mat-card-actions>
+    </mat-card-content>
+</mat-card>
+

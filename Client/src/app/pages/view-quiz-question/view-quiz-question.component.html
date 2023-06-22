@@ -1,0 +1,56 @@
+<h1 class="mt20">Question of {{quiztitle}}</h1>
+
+<div class="bootstrap-wrapper">
+   <div class="row">
+      <div class="col-md-12">
+         <mat-card *ngFor="let q of questionsList; let i = index "  class="mt20">
+             <mat-card-content>
+                 <p>
+                   <b>Q ( {{i+1}} )</b>
+                      <span class="ml20">{{q.content}}</span>
+
+                 </p>
+
+                       <div class="container-fluid">
+                           <div class="row">
+                              <div class="col-md-6">
+                                  <p>a.{{q.option1}}</p>
+                               </div>
+
+                               <div class="col-md-6">
+                                <p>b.{{q.option2}}</p>
+                             </div>
+
+                             <div class="col-md-6">
+                                <p>c.{{q.option3}}</p>
+                             </div>
+
+                             <div class="col-md-6">
+                                <p>d.{{q.option4}}</p>
+                             </div>
+                            <mat-divider></mat-divider>
+                            <p class="mt20"><b>Correct Answer :</b> {{q.answer}}</p>
+
+                           </div>
+                        </div>
+
+             </mat-card-content>
+
+             <mat-card-actions>
+                 <div class="row text-center">
+                 <button mat-raised-button color="primary" class="mt20 ml10" [routerLink]="'/admin/viewQuestion/' + q.qstnId">Update</button>
+                 <button mat-raised-button color="warn" class="mt20 ml10" (click)="deleteQstn(q.qstnId)">Delete</button>
+               </div>
+
+             </mat-card-actions>
+
+
+         </mat-card>
+
+               <div class="text-center">
+                   <button mat-raised-button color="accent" class="mt20" [routerLink]="'/admin/addQuestion/' + qid + '/' + quiztitle ">Add Question</button>
+               </div>
+
+      </div>
+   </div>
+</div>

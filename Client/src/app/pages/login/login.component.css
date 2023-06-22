@@ -1,0 +1,30 @@
+.full-width{
+    width : 100%;
+    margin-left:2px ;
+    margin-bottom: 2px;
+     height: 59px; 
+    background: transparent;
+    padding: 3px 9px;
+ 
+    
+ }
+ .img{
+    width: 250%;
+    margin-left: 35%; 
+ }
+ 
+ .button{
+     /* margin-left: 70px; */
+     margin-top: 10px;
+ }
+
+ .loginBoxn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: 420px;
+    box-sizing: border-box;
+    background:rgba(0,0,0,5) ;
+ }

@@ -1,0 +1,41 @@
+<body>
+    <app-navbar></app-navbar>
+    <div class="bootStrap-wrapper">
+        <div class="container">
+            <div class="box">
+                <div class="img">
+                    <img src="../../../assets/login2.png" width="10%">
+                </div>
+                <h2>Login Here</h2>
+               <!-- {{loginData | json}} -->
+                <form (ngSubmit)="loginSubmit()">
+                    <!-- user-name field -->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>User Name</mat-label>
+                        <input 
+                        [(ngModel)]="loginData.userName"
+                        name="userName"
+                        required matInput placeholder="Placeholder">
+                    </mat-form-field>
+
+                    <!-- password field -->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input 
+                        [(ngModel)]="loginData.password"
+                        name="password"
+                        required matInput placeholder="Placeholder">
+                    </mat-form-field>
+
+
+                    <div class="button text-center">
+                        <button type="submit" mat-raised-button color="primary"
+                            style="margin-right: 10px;">Register</button>
+                        <button type="reset" mat-raised-button color="warn">clear</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,16 @@
+.button-container{
+    width: 5px;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 170px;
+    margin-bottom: 20px;
+    text-align: center;
+    
+  }
+
+  .header-image{
+    background-size:cover;
+    background-image: url("../../../../assets/exam55.png");
+}
