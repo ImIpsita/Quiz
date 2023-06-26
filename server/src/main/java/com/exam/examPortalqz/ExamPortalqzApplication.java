@@ -18,8 +18,7 @@ import com.exam.examPortalqz.service.UserService;
 
 @SpringBootApplication
 @CrossOrigin("*")
-public class ExamPortalqzApplication {
-//implements CommandLineRunner {
+public class ExamPortalqzApplication implements CommandLineRunner {
 	
 	@Autowired
 	BCryptPasswordEncoder bycrypt;
@@ -33,33 +32,33 @@ public class ExamPortalqzApplication {
 	}
 	
 	
-//	@Override
-//	public void run(String... args) throws Exception {
-//		System.out.println("code started");
-//		
-//		User createUser =  new User();
-//		createUser.setUserName("Ipsita34");
-//		createUser.setPassword(bycrypt.encode("abc@123"));
-//		createUser.setFirstName("Ipsita");
-//		createUser.setLastName("Panda");
-//		createUser.setMobileNo("6370153986");
-//		createUser.setUserId(10L);
-//		
-//		RoleInfo roledetails = new RoleInfo();
-//		roledetails.setRoleName("ADMIN");
-//		roledetails.setRoleId(100L);
-//		 
-//		Set<UserRoleMap> userole=new HashSet<>();
-//		UserRoleMap userrolemap=new UserRoleMap();
-//		userrolemap.setUser(createUser);
-//		userrolemap.setRole(roledetails);
-//		userrolemap.setUserRoleMapId(1000L);
-//		userole.add(userrolemap);
-//		
-//		ResponseEntity<?> createuser2 = userService.createuser(createUser, userole);
-//		System.out.println(createuser2.getStatusCode());
-//		
-//		
-//		
-//	}
+	@Override
+	public void run(String... args) throws Exception {
+		System.out.println("code started");
+		
+		User createUser =  new User();
+		createUser.setUserName("Ipsita");
+		createUser.setPassword(bycrypt.encode("ip@123"));
+		createUser.setFirstName("Ipsita");
+		createUser.setLastName("Panda");
+		createUser.setMobileNo("6370153986");
+		createUser.setUserId(10L);
+		
+		RoleInfo roledetails = new RoleInfo();
+		roledetails.setRoleName("ADMIN");
+		roledetails.setRoleId(100L);
+		 
+		Set<UserRoleMap> userole=new HashSet<>();
+		UserRoleMap userrolemap=new UserRoleMap();
+		userrolemap.setUser(createUser);
+		userrolemap.setRole(roledetails);
+		userrolemap.setUserRoleMapId(1000L);
+		userole.add(userrolemap);
+		
+		ResponseEntity<?> createuser2 = userService.createuser(createUser, userole);
+		System.out.println(createuser2.getStatusCode());
+		
+		
+		
+	}
 }

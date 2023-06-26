@@ -1,0 +1,6 @@
+.covercenter{
+    object-fit: cover;
+    width: 100%;
+     height: 40rem;
+     overflow-y: hidden;
+}
